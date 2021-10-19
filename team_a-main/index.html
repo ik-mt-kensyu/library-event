@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <link href="./css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>index</title>
+    <script type="text/javascript">
+     const img_src = ["./img/画像1.png", "./img/画像2.png", "./img/画像3.png"];
+     let num = -1;
+     function slide_time() {
+       if (num === 2) {
+         num = 0;
+       } else {
+         num++;
+       }
+       document.getElementById("slide_img").src = img_src[num];
+     }
+     setInterval(slide_time, 3000);
+   </script>
+  </head>
+  <body>
+    <header>
+       <h1>A図書館　宮沢賢治イベント</h1>
+    </header>
+    <div id="side">
+      11月のイベント<br><br>
+      <img src="./img/画像1.png" alt="写真" width="386" height="260" id="slide_img" class="slider" />
+      <br><br>
+      A図書館所蔵の宮沢賢治関連資料を展示します。<br>
+      あわせて、宮沢賢治作品をテーマに講演会を開催します。<br><br>
+      <ul>
+        <li><a href="./collection.html" class="btn">展覧会</a></li><br>
+        <li><a href="./form.html" class="btn">講演会</a></li><br>
+        <li><a href="./access.html" class="btn">アクセス</a></li><br>
+      </ul>
+
+    </div>
+  </body>
+</html>
