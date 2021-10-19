@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>講演会</title>
+  <script type="text/javascript">
+     function check() {
+       if(document.form.name.value == "") {
+           alert("氏名を入力してください");
+           return false;
+       }
+       if(document.form.address.value == "") {
+           alert("メールアドレスを入力してください");
+           return false;
+       }
+       if(document.form.time.value == "") {
+           alert("参加希望時間を入力してください");
+           return false;
+       }
+   }
+   </script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="gnav">
+        <h1>A図書館　宮沢賢治イベント</h1>
+        <ul class="topnav">
+          <li><a href="./index.html">トップ</a></li>
+          <li><a href="./collection.html">展示</a></li>
+          <li><a class="active" href="./form.html">講演会</a></li>
+          <li><a href="./access.html">アクセス</a></li>
+          <li class="right"><strong>※存在しないイベントです</strong></li>
+        </ul>
+      </nav>
+     </header>
+     <article id="contents">
+    <h1>講演会</h1>
+    <h2>概要</h2>
+      <p>
+        宮沢賢治の研究家A氏をお招きし、講演会を開催します。<br>
+        奮ってご参加ください。
+      </p>
+
+      <h2>日時</h2>
+      <p>
+        11月5日<br>
+        &nbsp;10:00~12:00<br>
+        &nbsp;13:00~15:00<br>
+      </p>
+
+
+    <h2>お申込み</h2>
+    <form name="form" action="../../sample/sample.cgi" method="post" onsubmit="return check()">
+
+      <p>
+        <font color="red">※</font>のある項目は入力必須です。
+      </p>
+
+      <p>
+      1. 氏名 <font color="red">※</font><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" value="">
+      </p>
+
+      <p>
+      2. メールアドレス <font color="red">※</font><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="address" value="" size="40">
+      </p>
+
+      <p>
+      3. 年代<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<select class="age">
+        <option value="1">10歳未満</option>
+        <option value="2">10～19歳</option>
+        <option value="3">20～29歳</option>
+        <option value="4">30～39歳</option>
+        <option value="5">40～49歳</option>
+        <option value="6">50～59歳</option>
+        <option value="6">60歳以上</option>
+      </select>
+      </p>
+
+      <p>
+      3. 参加希望時間 <font color="red">※</font><br>
+       &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="time" value="1">10:00~12:00
+       <input type="radio" name="schedule" value="2">13:00~15:00
+      </p>
+
+      <p>
+      4. 宮沢賢治の作品で好きなもの<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="favorite" value="">
+      </p>
+
+      <p>
+      5. 質問・要望等<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<textarea name="free" rows="10" cols="70"></textarea>
+      </p>
+
+      <p>
+      <input type="submit" value="送信">
+      </p>
+
+    </form>
+  </article>
+  </body>
+</html>
